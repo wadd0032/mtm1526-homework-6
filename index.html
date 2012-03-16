@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Form Usability & Validation</title>
+	<link href="css/general.css" rel="stylesheet">
+</head>
+
+<body>
+	<form>
+		<div>
+			<label for="username">Username</label>
+			<input id="username"> <span class="status unavailable"></span>
+		</div>
+		
+		<div>
+			<label for="email">E-mail Address</label>
+			<input type="email" id="email" name="email"> <span class="email-status unavailable"></span>
+		</div>
+		
+		<div id="pass">
+			<label for="password">Password</label>
+			<input type="password" id="password">
+			<p>Your password must meet the following requirements:</p>
+			<ul class="pass-reqs">
+				<li class="req-length"> at least 6 characters long</li>
+				<li class="req-low"> contains at least 1 lower-case letter</li>
+				<li class="req-up"> contains at least 1 upper-case letter</li>
+				<li class="req-num"> contains at least 1 number</li>
+				<li class="req-spec"> contains at least 1 special character</li>
+			</ul>
+		</div>
+		
+		<div>
+			<label for="city">City</label>
+			<input id="city"> <span class="city-status"></span>
+		</div>
+		
+		<div>
+			<label for="country">Country</label>
+			<input type="radio" id="canada" name="country" value="Canada">Canada
+			<input type="radio" id="us" name="country" value="U.S.">U.S.
+		</div>
+
+		<div class="prov-state clearfix"></div>
+
+		<button type="submit">Submit</button>
+	</form>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="js/form.js"></script>
+</body>
+</html>
